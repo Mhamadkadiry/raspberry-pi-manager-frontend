@@ -3,7 +3,7 @@
 This project is in collaboration with uni-passau.
 
 ## Important note
-Before starting with scripts make sure to run npm install before runing the project and make sure that the backend is runing before
+Before starting with scripts make sure to run `npm install` before runing the project and make sure that the backend is runing before
 
 ## Available Scripts
 In the project directory, you can run:
