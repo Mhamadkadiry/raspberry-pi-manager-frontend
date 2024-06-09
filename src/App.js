@@ -39,23 +39,23 @@ function App() {
 
   return (
     <div className="wrapper">
-      <Container elevation={0}>
+      <Container  elevation={0}>
         <Grid container spacing={2} style={{ padding: '10px' }}>
           <Grid item xs={12} style={{ textAlign: 'center' }}>
-            <Item><h1>Raspberry PI setup</h1></Item>
+            <Item style={{ background: "#0077c0", color: "#fff" }}><h1>Raspberry PI setup</h1></Item>
           </Grid>
           <Grid item xs={4}>
-            <Item>
+            <Item style={{ background: "#0077c0", color: "#fff" }}>
               <DeviceSelector selectedDevice={selectedDevice} onDeviceSelect={handleDeviceSelect} />
             </Item>
           </Grid>
           <Grid item xs={4}>
-            <Item>
+            <Item style={{ background: "#0077c0", color: "#fff" }}>
               <OsSelector selectedOs={selectedOs} onOsSelect={handleOsSelect} selectedModel={selectedDevice} />
             </Item>
           </Grid>
           <Grid item xs={4}>
-            <Item>
+            <Item style={{ background: "#0077c0", color: "#fff" }}>
               <StorageSelector selectedStorage={selectedStorage} onStorageSelect={handleStorageSelect} />
             </Item>
           </Grid>

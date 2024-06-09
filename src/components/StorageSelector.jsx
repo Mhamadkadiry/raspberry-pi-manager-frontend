@@ -58,7 +58,7 @@ function StorageSelector({ onStorageSelect, selectedStorage }) {
   return (
     <div style={{ textAlign: "center", alignItems: 'center', padding: "20px" }}>
       <h1>Choose Storage</h1>
-      <Button variant="contained" color="primary"  onClick={handleOpen}>
+      <Button color='warning' variant="contained" onClick={handleOpen}>
         {getButtonLabel()}
       </Button>
       <Dialog open={open} onClose={handleClose}>

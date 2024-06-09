@@ -46,7 +46,7 @@ export default function OsSelector({ onOsSelect, selectedOs, selectedModel}) {
   return (
     <div style={{ textAlign: "center", alignItems: 'center', padding: "20px" }}>
       <h1>Choose OS</h1>
-        <Button variant="contained" onClick={handleOpen} style={{ width: '50%' }}>
+        <Button color='warning' variant="contained" onClick={handleOpen} style={{ width: '50%' }}>
           {os || 'Choose OS'}
         </Button>
       <Dialog open={open} onClose={handleClose}>
