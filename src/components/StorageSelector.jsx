@@ -16,7 +16,7 @@ const DriveListItem = styled(ListItem)(({ theme }) => ({
   borderRadius: '4px',
 }));
 
-function StorageSelector({ onStorageSelect, selectedStorage }) {
+function StorageSelector({ onStorageSelect, selectedStorage, disabled }) {
   const [drives, setDrives] = useState([]);
   const [open, setOpen] = useState(false);
   const [selectedDrive, setSelectedDrive] = useState(selectedStorage);
@@ -58,7 +58,7 @@ function StorageSelector({ onStorageSelect, selectedStorage }) {
   return (
     <div style={{ textAlign: "center", alignItems: 'center', padding: "20px" }}>
       <h1>Choose Storage</h1>
-      <Button color='warning' variant="contained" onClick={handleOpen}>
+      <Button disabled={disabled} color='warning' variant="contained" onClick={handleOpen}>
         {getButtonLabel()}
       </Button>
       <Dialog open={open} onClose={handleClose}>

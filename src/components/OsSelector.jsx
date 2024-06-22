@@ -9,7 +9,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import axios from 'axios';
 
-export default function OsSelector({ onOsSelect, selectedOs, selectedModel}) {
+export default function OsSelector({ onOsSelect, selectedOs, selectedModel, disabled}) {
   const [os, setOs] = useState(selectedOs);
   const [open, setOpen] = useState(false);
   const [availableVersions, setAvailableVersions] = useState([]);
@@ -46,7 +46,7 @@ export default function OsSelector({ onOsSelect, selectedOs, selectedModel}) {
   return (
     <div style={{ textAlign: "center", alignItems: 'center', padding: "20px" }}>
       <h1>Choose OS</h1>
-        <Button color='warning' variant="contained" onClick={handleOpen} style={{ width: '50%' }}>
+        <Button disabled={disabled} color='warning' variant="contained" onClick={handleOpen} style={{ width: '50%' }}>
           {os || 'Choose OS'}
         </Button>
       <Dialog open={open} onClose={handleClose}>

@@ -63,7 +63,7 @@ const raspberryPiVersions = [
     }
   ];  
 
-export default function DeviceSelector({onDeviceSelect, selectedDevice}) {
+export default function DeviceSelector({onDeviceSelect, selectedDevice, disabled}) {
   const [device, setDevice] = useState(selectedDevice);
   const [open, setOpen] = useState(false);
 
@@ -88,7 +88,7 @@ export default function DeviceSelector({onDeviceSelect, selectedDevice}) {
   return (
     <div style={{ textAlign: "center", alignItems: 'center', padding: "20px" }}>
       <h1>Choose Device</h1>
-        <Button color='warning' variant="contained" onClick={handleOpen} style={{ width: '50%' }}>
+        <Button disabled={disabled} color='warning' variant="contained" onClick={handleOpen} style={{ width: '50%' }}>
           {device ? "Raspberry Pi " + device : 'Choose Device'}
         </Button>
       <Dialog open={open} onClose={handleClose}>
